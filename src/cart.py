@@ -26,7 +26,8 @@ def add_to_cart(customer_email: str, item_id: str, quantity: int) -> bool:
 def remove_from_cart(customer_email: str, item_id: str) -> bool:
     """
     Remove an item entirely from the customer's cart.
-    Returns True if the item was present and removed, False otherwise.
+    Returns True if the item was present and removed, 
+    False otherwise.
     """
     cart = _carts.get(customer_email, {})
     if item_id not in cart:
@@ -37,7 +38,8 @@ def remove_from_cart(customer_email: str, item_id: str) -> bool:
 
 def get_cart(customer_email: str) -> dict:
     """
-    Return a copy of the customer's cart as { item_id: quantity }.
+    Return a copy of the customer's cart as 
+    { item_id: quantity }.
     Returns an empty dict if the customer has no cart.
     """
     return dict(_carts.get(customer_email, {}))

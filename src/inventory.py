@@ -16,7 +16,8 @@ def get_stock(item_id: str) -> int:
 def reduce_stock(item_id: str, quantity: int) -> bool:
     """
     Reduce stock by quantity.
-    Returns True on success, False if there is insufficient stock.
+    Returns True on success, False if there is 
+    insufficient stock.
     Raises ValueError if quantity is not a positive integer.
     """
     if quantity <= 0:
@@ -29,6 +30,7 @@ def reduce_stock(item_id: str, quantity: int) -> bool:
 
 
 def reset_stock():
-    """Reset stock to default values. Call this in test setUp/teardown."""
+    """Reset stock to default values. 
+    Call this in test setUp/teardown."""
     _stock.clear()
     _stock.update({"laptop": 10, "mouse": 50, "keyboard": 25})

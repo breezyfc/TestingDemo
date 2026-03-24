@@ -26,7 +26,9 @@ def place_order(customer_email: str, item_id: str, quantity: int) -> OrderResult
       1. Validate inputs (email format, quantity > 0)
       2. Check available stock via inventory.get_stock()
       3. Reduce stock via inventory.reduce_stock()
-      4. Send a confirmation via notifications.send_confirmation()
+      4. Send a confirmation via notifications.
+      notifications.
+      send_confirmation()
       5. Return an OrderResult indicating success or failure
     """
     if not customer_email or "@" not in customer_email:

@@ -10,7 +10,6 @@
 #    my cart is cleared, and I receive a confirmation."
 
 import cart
-import inventory
 import orders
 
 
@@ -35,14 +34,18 @@ def checkout(customer_email: str) -> CheckoutResult:
     For each item in the cart:
       - Attempt to place an order via orders.place_order()
       - If successful: item is recorded as ordered
-      - If unsuccessful (out of stock, etc.): item is recorded as a failure
+      - If unsuccessful (out of stock, etc.): 
+      item is recorded as a failure
 
     After processing all items:
-      - If every item succeeded: cart is cleared, result is success
-      - If some items failed: cart keeps only the failed items, result is partial failure
+      - If every item succeeded: cart is cleared, 
+      result is success
+      - If some items failed: cart keeps only the failed
+      - items, result is partial failure
       - If the cart was empty: return an error immediately
 
-    Notifications are sent per item by orders.place_order() automatically.
+    Notifications are sent per item by orders.place_order() 
+    automatically.
     """
     if not customer_email or "@" not in customer_email:
         return CheckoutResult(False, "Invalid customer email")
