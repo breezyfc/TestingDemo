@@ -1,15 +1,9 @@
-# tests/test_step1_unit_orders.py
-#
-# ══════════════════════════════════════════════════════════════════
+
 #  STEP 1 — Unit Tests: orders module
 #  We test place_order() IN ISOLATION by replacing (mocking) its
 #  dependencies: inventory and notifications are faked out so we
 #  only test the ORDER logic, nothing else.
-# ══════════════════════════════════════════════════════════════════
-#
-# Run with:
-#     pytest tests/test_step1_unit_orders.py -v
-#
+
 # KEY CONCEPT: unittest.mock.patch temporarily replaces a real
 # module with a controlled fake (a "mock") for the duration of
 # one test.  When the test finishes, the real module is restored.

@@ -1,6 +1,4 @@
-# tests/test_step2_feature.py
-#
-# ══════════════════════════════════════════════════════════════════
+
 #  STEP 2 — Feature / Functional Tests: the Checkout feature
 #
 #  We are testing the COMPLETE "Place Order" feature end-to-end:
@@ -19,10 +17,6 @@
 #      specific module pairs.
 #    - Tests represent realistic user scenarios (happy path, sad paths).
 #    - We are not deliberately breaking internal interfaces here.
-# ══════════════════════════════════════════════════════════════════
-#
-# Run with:
-#     pytest tests/test_step2_feature.py -v
 
 import pytest
 import cart
@@ -32,7 +26,7 @@ import checkout
 
 
 # ── Shared setup ──────────────────────────────────────────────────────────────
-# Reset ALL state before every test — feature tests touch the whole system.
+# Reset ALL state before every test; feature tests touch the whole system.
 
 def setup_function():
     inventory.reset_stock()
@@ -40,11 +34,9 @@ def setup_function():
     cart.reset_all_carts()
 
 
-# ══════════════════════════════════════════════════════════════════════════════
 #  REQUIREMENT 1
 #  "A customer with items in their cart can complete a checkout.
 #   On success, their order is confirmed and their cart is cleared."
-# ══════════════════════════════════════════════════════════════════════════════
 
 class TestCheckoutHappyPath:
 
@@ -144,11 +136,9 @@ class TestCheckoutEmptyCart:
         assert len(notifications.get_sent()) == 0
 
 
-# ══════════════════════════════════════════════════════════════════════════════
 #  REQUIREMENT 3
 #  "If an item in the cart is out of stock at checkout time,
 #   that item fails but other items in the cart still process."
-# ══════════════════════════════════════════════════════════════════════════════
 
 class TestCheckoutPartialFailure:
 
@@ -208,10 +198,8 @@ class TestCheckoutPartialFailure:
         assert "stock" in result.failures[0]["reason"].lower()
 
 
-# ══════════════════════════════════════════════════════════════════════════════
 #  REQUIREMENT 4
 #  "Invalid customer inputs are rejected before any processing begins."
-# ══════════════════════════════════════════════════════════════════════════════
 
 class TestCheckoutInputValidation:
 

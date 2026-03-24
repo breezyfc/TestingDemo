@@ -3,6 +3,7 @@ __pycache__/
 *.pyc
 *.pyo
 .pytest_cache/
+**/__pycache__/
 
 # Virtual environments
 venv/
@@ -13,6 +14,8 @@ env/
 # Environment variables (secrets!)
 .env
 *.env
+
+testlab1/
 
 # VS Code
 .vscode/

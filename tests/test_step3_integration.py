@@ -1,14 +1,9 @@
-# tests/test_step3_integration.py
-#
-# ══════════════════════════════════════════════════════════════════
+
 #  STEP 3 — Integration Tests: orders + inventory + notifications
 #  NO mocking.  All three real modules are wired together.
 #  We are testing that they collaborate correctly.
-# ══════════════════════════════════════════════════════════════════
 #
-# Run with:
-#     pytest tests/test_step3_integration.py -v
-#
+
 # WHAT IS DIFFERENT FROM UNIT TESTS?
 #   Unit tests swapped out inventory/notifications with fakes.
 #   Integration tests use the REAL modules — so a bug in inventory

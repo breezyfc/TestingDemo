@@ -1,13 +1,7 @@
-# tests/test_step1_unit_inventory.py
-#
-# ══════════════════════════════════════════════════════════════════
+
 #  STEP 1 — Unit Tests: inventory module
 #  Test each function IN ISOLATION. No orders, no notifications.
-# ══════════════════════════════════════════════════════════════════
-#
-# Run these from the project root with:
-#     pytest tests/test_step1_unit_inventory.py -v
-#
+
 # Every test follows the same three-part pattern:
 #   ARRANGE  – set up the starting state
 #   ACT      – call the function under test
