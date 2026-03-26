@@ -2,7 +2,7 @@
 # Manages a shopping cart. A cart belongs to one customer and can
 # hold multiple items before checkout.
 #
-# This module knows NOTHING about stock or payments — it 
+# This module knows NOTHING about stock or payments — it
 # is what the user sees and interacts with.
 # responsible for building a list of intended purchases.
 
@@ -27,7 +27,7 @@ def add_to_cart(customer_email: str, item_id: str, quantity: int) -> bool:
 def remove_from_cart(customer_email: str, item_id: str) -> bool:
     """
     Remove an item entirely from the customer's cart.
-    Returns True if the item was present and removed, 
+    Returns True if the item was present and remove
     False otherwise.
     """
     cart = _carts.get(customer_email, {})
@@ -39,7 +39,7 @@ def remove_from_cart(customer_email: str, item_id: str) -> bool:
 
 def get_cart(customer_email: str) -> dict:
     """
-Return a copy of the customer's cart as 
+Return a copy of the customer's cart 
 { item_id: quantity }.
 Returns an empty dict if the customer has no cart.
     """
