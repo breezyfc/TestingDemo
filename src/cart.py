@@ -39,9 +39,9 @@ def remove_from_cart(customer_email: str, item_id: str) -> bool:
 
 def get_cart(customer_email: str) -> dict:
     """
-    Return a copy of the customer's cart as 
-    { item_id: quantity }.
-    Returns an empty dict if the customer has no cart.
+Return a copy of the customer's cart as 
+{ item_id: quantity }.
+Returns an empty dict if the customer has no cart.
     """
     return dict(_carts.get(customer_email, {}))
 
